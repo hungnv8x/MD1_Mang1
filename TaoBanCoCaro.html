@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="hienthi"></div>
+<br>
+<button onclick="changeValue()">Change value</button>
+<script>
+    let arr = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        arr[i] = [];
+        for (let j = 0; j < 5; j++) {
+            arr[i][j] = 0;
+            data += arr[i][j] +'&nbsp&nbsp';
+        }
+        data+='<br>'
+    }
+    document.getElementById('hienthi').innerHTML=data;
+    function changeValue() {
+        data="";
+        let a=+prompt('Nhap vi tri doc : ')
+        let b=+prompt('Nhap vi tri ngang : ')
+        arr[a][b]='x'
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                data += arr[i][j] +'&nbsp&nbsp';
+            }
+            data+='<br>'
+        }
+        document.getElementById('hienthi').innerHTML=data
+    }
+</script>
+</body>
+</html>
